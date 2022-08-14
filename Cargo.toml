@@ -1,0 +1,30 @@
+[package]
+name = "renpy-text-hook"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "renpy_text_hook"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# CLI parser
+clap = { version = "3.2.17", features = ["derive"] }
+
+# Function detour
+detour = "0.8.0"
+
+# Dylib injection
+intruducer = { git = "https://github.com/vfsfitvnm/intruducer" }
+
+# libc bindings
+libc = "0.2.131"
+
+# Clipboard
+arboard = "2.1.1"
+
+# Error handling
+anyhow = "1.0.61"
